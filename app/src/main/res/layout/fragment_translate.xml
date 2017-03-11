@@ -1,0 +1,140 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fragments.TranslateFragment">
+
+    <LinearLayout
+        android:id="@+id/content_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:weightSum="10">
+
+            <LinearLayout
+                android:id="@+id/top_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/trans_btn_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/translateBtn"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_alignParentRight="true"
+                        android:text="@string/translate"
+                        android:textSize="12sp"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"/>
+
+                    <Switch
+                        android:id="@+id/langSwitch"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/translateBtn"
+                        android:textSize="12sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <EditText
+                        android:id="@+id/translateEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="@string/translate_hint"
+                        android:background="@drawable/border"
+                        android:padding="10dp"
+                        android:layout_toLeftOf="@+id/translateBtn"
+                        android:inputType="textMultiLine|textNoSuggestions"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="@android:color/white"
+                        android:textSize="12dp"/>
+
+                </RelativeLayout>
+
+                <ListView
+                    android:id="@+id/listview"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:textColor="@android:color/white"
+                    android:text=""
+                    android:background="@drawable/border"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/buttons"
+                android:layout_width="match_parent"
+                android:layout_weight="5"
+                android:layout_marginTop="10dp"
+                android:layout_height="0dp">
+
+                <ImageView
+                    android:id="@+id/iSpeakIcon"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:scaleType="fitXY"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ispeak"
+                    />
+
+                <ImageView
+                    android:id="@+id/uSpeakIcon"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:scaleType="fitXY"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/uspeak"
+                    />
+
+                <ImageView
+                    android:id="@+id/helpIcon"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:scaleType="fitXY"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/help"
+                    />
+
+                <ImageView
+                    android:id="@+id/cameraIcon"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:scaleType="fitXY"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/camera"
+                    />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
